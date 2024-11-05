@@ -47,26 +47,27 @@
         app:layout_constraintVertical_bias="0.541" />
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainButtonImages"
         android:layout_width="410dp"
         android:layout_height="96dp"
+        android:background="@drawable/rectangle_button_main"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:columnCount="2"
-        app:rowCount="2"
         app:layout_constraintVertical_bias="0.704"
-        android:background="@drawable/rectangle_button_main">
+        app:rowCount="2">
 
         <ImageView
             android:id="@+id/imageViewImagesMain"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:background="@drawable/rectangle_button_main"
+            android:scaleType="fitCenter"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/imageselecter"
-            android:background="@drawable/rectangle_button_main"
-            android:scaleType="fitCenter"/>
+            app:srcCompat="@drawable/imageselecter" />
 
 
         <TextView
@@ -92,26 +93,27 @@
     </androidx.gridlayout.widget.GridLayout>
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainButtonVideos"
         android:layout_width="410dp"
         android:layout_height="96dp"
+        android:background="@drawable/rectangle_button_main"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:columnCount="2"
-        app:rowCount="2"
         app:layout_constraintVertical_bias="0.854"
-        android:background="@drawable/rectangle_button_main">
+        app:rowCount="2">
 
         <ImageView
             android:id="@+id/imageViewVideosMain"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:background="@drawable/rectangle_button_main"
+            android:scaleType="centerInside"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/videoselecter"
-            android:background="@drawable/rectangle_button_main"
-            android:scaleType="centerInside"/>
+            app:srcCompat="@drawable/videoselecter" />
 
 
         <TextView
@@ -137,26 +139,27 @@
     </androidx.gridlayout.widget.GridLayout>
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainButtonAudios"
         android:layout_width="410dp"
         android:layout_height="96dp"
+        android:background="@drawable/rectangle_button_main"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:columnCount="2"
-        app:rowCount="2"
         app:layout_constraintVertical_bias="0.994"
-        android:background="@drawable/rectangle_button_main">
+        app:rowCount="2">
 
         <ImageView
             android:id="@+id/imageViewAudioMain"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:background="@drawable/rectangle_button_main"
+            android:scaleType="centerCrop"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/microphone"
-            android:background="@drawable/rectangle_button_main"
-            android:scaleType="centerCrop"/>
+            app:srcCompat="@drawable/microphone" />
 
 
         <TextView
