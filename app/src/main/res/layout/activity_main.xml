@@ -5,15 +5,183 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/layoutLogo"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@drawable/circle_image_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07">
+
+        <ImageView
+            android:id="@+id/myImageViewLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/owlwisdomapp" />
+    </FrameLayout>
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/textViewTitle"
+        android:background="#71CBD6"
+        android:layout_width="416dp"
+        android:layout_height="90dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="@string/mainTextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainButtonImages"
+        android:layout_width="410dp"
+        android:layout_height="96dp"
+        android:background="@drawable/rectangle_button_main"
+        app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704"
+        app:rowCount="2">
+
+        <ImageView
+            android:id="@+id/imageViewImagesMain"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/rectangle_button_main"
+            android:scaleType="fitCenter"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/imageselecter" />
+
+
+        <TextView
+            android:id="@+id/textViewImagesMain1"
+            android:layout_width="304dp"
+            android:layout_height="44dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/textViewImagessubtitleMain"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/textViewImagesMain2"
+            android:layout_width="304dp"
+            android:layout_height="44dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/textViewImagesMain"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainButtonVideos"
+        android:layout_width="410dp"
+        android:layout_height="96dp"
+        android:background="@drawable/rectangle_button_main"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854"
+        app:rowCount="2">
+
+        <ImageView
+            android:id="@+id/imageViewVideosMain"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/rectangle_button_main"
+            android:scaleType="centerInside"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/videoselecter" />
+
+
+        <TextView
+            android:id="@+id/textViewVideosMain1"
+            android:layout_width="304dp"
+            android:layout_height="44dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/textViewVideossubtitleMain"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/textViewVideoMain2"
+            android:layout_width="304dp"
+            android:layout_height="44dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/textViewVideosMain"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/mainButtonAudios"
+        android:layout_width="410dp"
+        android:layout_height="96dp"
+        android:background="@drawable/rectangle_button_main"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.994"
+        app:rowCount="2">
+
+        <ImageView
+            android:id="@+id/imageViewAudioMain"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/rectangle_button_main"
+            android:scaleType="centerCrop"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/microphone" />
+
+
+        <TextView
+            android:id="@+id/textViewAudioMain1"
+            android:layout_width="304dp"
+            android:layout_height="44dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/textViewAudiosubtitleMain"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/textViewAudioMain2"
+            android:layout_width="304dp"
+            android:layout_height="44dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/textViewAudioMain"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

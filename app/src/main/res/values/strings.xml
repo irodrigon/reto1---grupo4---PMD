@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WisdomApp</string>
+    <string name="textViewImagesMain">Imágenes</string>
+    <string name="textViewImagessubtitleMain">Fotografías de apuntes.</string>
+    <string name="textViewVideosMain">Vídeos</string>
+    <string name="textViewVideossubtitleMain">Explicaciones en vídeo.</string>
+    <string name="textViewAudioMain">Audios</string>
+    <string name="textViewAudiosubtitleMain">Explicaciones grabadas en audio.</string>
+    <string name="mainTextView">Wisdom</string>
 </resources>
