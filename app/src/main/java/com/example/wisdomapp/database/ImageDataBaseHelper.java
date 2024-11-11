@@ -18,7 +18,7 @@ import java.util.List;
 public class ImageDataBaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "media.db";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 14;
     private static final String TABLE_NAME = "images";
     private static final String COL_ID = "id";
     private static final String COL_TITLE = "title";

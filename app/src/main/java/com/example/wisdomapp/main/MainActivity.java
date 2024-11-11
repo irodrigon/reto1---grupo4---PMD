@@ -24,19 +24,15 @@ import com.example.wisdomapp.activities.libraryactivities.VideoLibraryActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private GridLayout mainButtonImages;
-    private GridLayout mainButtonVideos;
-    private GridLayout mainButtonAudios;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        mainButtonImages = (GridLayout) findViewById(R.id.mainButtonImages);
-        mainButtonVideos = (GridLayout) findViewById(R.id.mainButtonVideos);
-        mainButtonAudios = (GridLayout) findViewById(R.id.mainButtonAudios);
+        GridLayout mainButtonImages = (GridLayout) findViewById(R.id.mainButtonImages);
+        GridLayout mainButtonVideos = (GridLayout) findViewById(R.id.mainButtonVideos);
+        GridLayout mainButtonAudios = (GridLayout) findViewById(R.id.mainButtonAudios);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
