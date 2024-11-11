@@ -1,4 +1,4 @@
-package com.example.wisdomapp;
+package com.example.wisdomapp.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.wisdomapp.R;
+import com.example.wisdomapp.activities.libraryactivities.AudioLibraryActivity;
+import com.example.wisdomapp.activities.libraryactivities.ImageLibraryActivity;
+import com.example.wisdomapp.activities.libraryactivities.VideoLibraryActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        mainButtonImages.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ImageLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
+        mainButtonAudios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AudioLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
 
         mainButtonVideos.setOnClickListener(new View.OnClickListener() {
             @Override

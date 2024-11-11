@@ -7,4 +7,25 @@
     <string name="textViewAudioMain">Audios</string>
     <string name="textViewAudiosubtitleMain">Explicaciones grabadas en audio.</string>
     <string name="mainTextView">Wisdom</string>
+    <string name="titulo_audio">Audio</string>
+    <string name="opcion_principal">Imagenes</string>
+    <string name="opcion_principal2">Videos</string>
+    <string name="opcion_principal3">Audios</string>
+    <string name="opcion_audio1">Historia de España</string>
+    <string name="opcion_audio2">Historia de America</string>
+    <string name="opcion_audio3">Historia de Francia</string>
+    <string name="btGrabar">Grabar Video</string>
+    <string name="btVolver">Volver</string>
+    <string name="text_hint">Nombre del video</string>
+    <string name="btIrGrabar">Ir a grabar</string>
+    <string name="btIrApuntes">Ir a apuntes</string>
+    <string name="title">Titulo:</string>
+    <string name="Path">Ruta:</string>
+    <string name="playVideo">Reproducir Video</string>
+    <string name="saveAudio">Guardar audio</string>
+    <string name="addDescription">Añadir Descripción</string>
+    <string name="startRecording">Empezar grabacion</string>
+    <string name="stopRecording">Parar grabacion</string>
+    <string name="text_hint_image">Nombre de la imagen</string>
+    <string name="textSacarfoto">Sacar foto</string>
 </resources>

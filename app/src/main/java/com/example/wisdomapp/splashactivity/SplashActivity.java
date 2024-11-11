@@ -1,4 +1,4 @@
-package com.example.wisdomapp;
+package com.example.wisdomapp.splashactivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.wisdomapp.R;
+import com.example.wisdomapp.main.MainActivity;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -47,22 +50,14 @@ public class SplashActivity extends AppCompatActivity {
         gifImageView.setImageResource(R.drawable.wisdom_fade_in);
 
         new Handler().postDelayed(new Runnable() {
-
             @Override
-
             public void run() {
-
-                // Start the main activity
-
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-
                 activityResultLauncher.launch(intent);
-
-                finish(); // Close the splash activity
-
+                finish();
             }
 
-        }, 3000);
+        }, 5500);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -70,21 +65,14 @@ public class SplashActivity extends AppCompatActivity {
             return insets;
         });
     }
+
     @Override
-
     protected void onDestroy() {
-
         super.onDestroy();
-
-        // Release the MediaPlayer resources
-
         if (mediaPlayer != null) {
-
             mediaPlayer.release();
-
             mediaPlayer = null;
-
         }
-
     }
+
 }
