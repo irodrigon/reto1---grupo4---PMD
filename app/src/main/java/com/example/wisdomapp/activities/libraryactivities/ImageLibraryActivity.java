@@ -22,16 +22,19 @@ import com.example.wisdomapp.R;
 import com.example.wisdomapp.activities.loadactivities.LoadImageActivity;
 import com.example.wisdomapp.activities.loadactivities.LoadVideoActivity;
 import com.example.wisdomapp.adapters.ImageAdapter;
-import com.example.wisdomapp.database.ImageDataBaseHelper;
+import com.example.wisdomapp.database.DataBaseHelper;
 import com.example.wisdomapp.items.Image;
+import com.example.wisdomapp.items.Video;
 import com.example.wisdomapp.main.MainActivity;
 
 import java.util.List;
 
 public class ImageLibraryActivity extends AppCompatActivity {
 
-    private ImageDataBaseHelper helper;
+    private DataBaseHelper helper;
     private ImageButton imageLibraryBackToMainButton;
+    private ImageButton audioLibraryButtonImage;
+    private ImageButton videoLibraryButtonImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +43,10 @@ public class ImageLibraryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_image_library);
 
         imageLibraryBackToMainButton = (ImageButton) findViewById(R.id.imagelibrarybacktomainbutton);
+        audioLibraryButtonImage = (ImageButton) findViewById(R.id.AudioLibraryButtonImage);
+        videoLibraryButtonImage = (ImageButton) findViewById(R.id.VideoLibraryButtonImage);
 
-        helper = new ImageDataBaseHelper(this);
+        helper = new DataBaseHelper(this);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -63,6 +68,22 @@ public class ImageLibraryActivity extends AppCompatActivity {
             }
         });
 
+        audioLibraryButtonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ImageLibraryActivity.this, AudioLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
+        videoLibraryButtonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ImageLibraryActivity.this, VideoLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
         ImageView imgViewloadImage= (ImageView) findViewById(R.id.buttonloadimage);
         imgViewloadImage.setOnClickListener(view -> {
             Intent intent = new Intent(ImageLibraryActivity.this, LoadImageActivity.class);
@@ -79,7 +100,7 @@ public class ImageLibraryActivity extends AppCompatActivity {
     }
 
         private void displayImages() {
-            List<Image> imageList= helper.getImagesList();
+            List<Image> imageList= helper.getImageList();
 
             ImageAdapter ImageAdapter = new ImageAdapter(imageList);
             RecyclerView recyclerView = findViewById(R.id.recyclerView);

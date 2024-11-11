@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/btnSacarFoto"
-        android:layout_width="408dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="@drawable/rectangle_button"
         android:text="@string/textSacarfoto"
@@ -24,7 +24,7 @@
 
     <Button
         android:id="@+id/btIrApuntes2"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="@drawable/rectangle_button"
         android:text="@string/btIrApuntes"
@@ -39,7 +39,7 @@
 
     <EditText
         android:id="@+id/textImage"
-        android:layout_width="417dp"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
         android:ems="10"
         android:hint="@string/text_hint_image"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="?android:attr/selectableItemBackground">
@@ -9,15 +9,16 @@
 
     <TextView
         android:id="@+id/textViewImage"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:gravity="center"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/imageViewImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:contentDescription="alt image" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY" />
 </LinearLayout>

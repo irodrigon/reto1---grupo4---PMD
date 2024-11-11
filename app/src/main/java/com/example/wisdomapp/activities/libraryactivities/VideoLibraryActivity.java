@@ -18,19 +18,21 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.wisdomapp.activities.loadactivities.LoadVideoActivity;
+import com.example.wisdomapp.database.DataBaseHelper;
 import com.example.wisdomapp.main.MainActivity;
 import com.example.wisdomapp.R;
 import com.example.wisdomapp.items.Video;
 import com.example.wisdomapp.adapters.VideoAdapter;
-import com.example.wisdomapp.database.VideoDataBaseHelper;
 
 import java.util.List;
 
 public class VideoLibraryActivity extends AppCompatActivity {
 
-    private VideoDataBaseHelper helper;
+    private DataBaseHelper helper;
     private ListView videoListView;
     private ImageButton videosLibraryBackToMainButton;
+    private ImageButton imageLibraryButtonVideo;
+    private ImageButton audioLibraryButtonVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class VideoLibraryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video_library);
 
         videosLibraryBackToMainButton = (ImageButton) findViewById(R.id.videoslibrarybacktomainbutton);
+        imageLibraryButtonVideo = (ImageButton) findViewById(R.id.imageLibraryButtonVideo);
+        audioLibraryButtonVideo = (ImageButton) findViewById(R.id.AudioLibraryButtonVideo);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -60,7 +64,7 @@ public class VideoLibraryActivity extends AppCompatActivity {
             }
         });
 
-        helper = new VideoDataBaseHelper(this);
+        helper = new DataBaseHelper(this);
         videoListView = findViewById(R.id.videoListView);
 
         displayVideos();
@@ -71,6 +75,21 @@ public class VideoLibraryActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        imageLibraryButtonVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VideoLibraryActivity.this, ImageLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
+        audioLibraryButtonVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VideoLibraryActivity.this, AudioLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

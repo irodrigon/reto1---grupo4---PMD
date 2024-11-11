@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.libraryactivities.AudioLibraryActivity">
-
+    
     <RelativeLayout
         android:id="@+id/blueContainer"
         android:layout_width="0dp"
@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/Audio"
+            android:id="@+id/AudioLibraryButtonAudio"
             android:layout_width="68dp"
             android:layout_height="51dp"
             android:layout_alignParentEnd="true"
@@ -78,7 +78,7 @@
             app:srcCompat="@drawable/microphone" />
 
         <ImageButton
-            android:id="@+id/Video"
+            android:id="@+id/videoLibraryButtonAudio"
             android:layout_width="68dp"
             android:layout_height="51dp"
             android:layout_centerHorizontal="true"
@@ -88,7 +88,7 @@
             app:srcCompat="@drawable/videocam" />
 
         <ImageButton
-            android:id="@+id/Image"
+            android:id="@+id/imageLibraryButtonAudio"
             android:layout_width="68dp"
             android:layout_height="51dp"
             android:layout_alignParentStart="true"

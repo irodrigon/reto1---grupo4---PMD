@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -26,11 +25,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.wisdomapp.R;
 import com.example.wisdomapp.activities.libraryactivities.ImageLibraryActivity;
-import com.example.wisdomapp.activities.libraryactivities.VideoLibraryActivity;
-import com.example.wisdomapp.database.ImageDataBaseHelper;
-import com.example.wisdomapp.database.VideoDataBaseHelper;
-import com.example.wisdomapp.items.Image;
-
+import com.example.wisdomapp.database.DataBaseHelper;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,7 +36,7 @@ import java.util.Locale;
 public class LoadImageActivity extends AppCompatActivity {
 
     private static final int REQUEST_PHOTO_CAPTURE = 1;
-    private ImageDataBaseHelper helper;
+    private DataBaseHelper helper;
     private EditText titleEditText;
     private static final int REQUEST_CAMERA_PERMISSION = 100;
 
@@ -51,7 +46,7 @@ public class LoadImageActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_load_image);
 
-        helper = new ImageDataBaseHelper(this);
+        helper = new DataBaseHelper(this);
         Button btnSacarFoto = findViewById(R.id.btnSacarFoto);
         Button btnVolver = findViewById(R.id.btIrApuntes2);
         titleEditText = findViewById(R.id.textImage);
@@ -147,7 +142,5 @@ public class LoadImageActivity extends AppCompatActivity {
         }
 
     }
-
-
 
 }

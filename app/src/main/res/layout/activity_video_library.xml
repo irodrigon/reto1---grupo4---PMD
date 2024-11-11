@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/Audio"
+            android:id="@+id/AudioLibraryButtonVideo"
             android:layout_width="68dp"
             android:layout_height="51dp"
             android:layout_alignParentEnd="true"
@@ -27,7 +27,7 @@
             app:srcCompat="@drawable/microphone" />
 
         <ImageButton
-            android:id="@+id/Video"
+            android:id="@+id/VideoLibraryButtonVideo"
             android:layout_width="68dp"
             android:layout_height="51dp"
             android:layout_centerHorizontal="true"
@@ -37,7 +37,7 @@
             app:srcCompat="@drawable/videocam" />
 
         <ImageButton
-            android:id="@+id/Image"
+            android:id="@+id/imageLibraryButtonVideo"
             android:layout_width="68dp"
             android:layout_height="51dp"
             android:layout_alignParentStart="true"

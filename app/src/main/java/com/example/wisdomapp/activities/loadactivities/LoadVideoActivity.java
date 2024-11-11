@@ -27,12 +27,12 @@ import android.Manifest;
 
 import com.example.wisdomapp.R;
 import com.example.wisdomapp.activities.libraryactivities.VideoLibraryActivity;
-import com.example.wisdomapp.database.VideoDataBaseHelper;
+import com.example.wisdomapp.database.DataBaseHelper;
 
 public class LoadVideoActivity extends AppCompatActivity {
 
     private static final int REQUEST_VIDEO_CAPTURE = 1;
-    private VideoDataBaseHelper helper;
+    private DataBaseHelper helper;
     private EditText titleEditText;
     private static final int REQUEST_CAMERA_PERMISSION = 100;
 
@@ -44,7 +44,7 @@ public class LoadVideoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_load_video);
 
 
-        helper = new VideoDataBaseHelper(this);
+        helper = new DataBaseHelper(this);
         Button btVideo = findViewById(R.id.btGrabar);
         Button btVolver = findViewById(R.id.btIrApuntes);
         titleEditText = findViewById(R.id.textVideo);

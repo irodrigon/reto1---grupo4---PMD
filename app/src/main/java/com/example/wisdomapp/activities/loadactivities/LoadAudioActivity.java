@@ -23,7 +23,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.wisdomapp.R;
 import com.example.wisdomapp.activities.libraryactivities.AudioLibraryActivity;
-import com.example.wisdomapp.database.AudioDataBaseHelper;
+import com.example.wisdomapp.database.DataBaseHelper;
 
 import java.io.IOException;
 import java.io.File;
@@ -38,7 +38,7 @@ public class LoadAudioActivity extends AppCompatActivity {
     private Button buttonVolverAudioLibrary;
     private Button buttonRecord;
     private Button buttonStopRecording;
-    private AudioDataBaseHelper helper;
+    private DataBaseHelper helper;
     private MediaRecorder mediaRecorder;
     private String audioFilePath;
 
@@ -48,7 +48,7 @@ public class LoadAudioActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_load_audio);
 
-        helper = new AudioDataBaseHelper(this);
+        helper = new DataBaseHelper(this);
 
         editTextDescription = findViewById(R.id.editTextDescription);
         buttonVolverAudioLibrary = findViewById(R.id.buttonVolverAudioLibrary);

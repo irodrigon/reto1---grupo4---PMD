@@ -18,9 +18,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wisdomapp.database.DataBaseHelper;
 import com.example.wisdomapp.items.Audio;
 import com.example.wisdomapp.adapters.AudioAdapter;
-import com.example.wisdomapp.database.AudioDataBaseHelper;
 import com.example.wisdomapp.activities.loadactivities.LoadAudioActivity;
 import com.example.wisdomapp.main.MainActivity;
 import com.example.wisdomapp.R;
@@ -30,9 +30,11 @@ import java.util.List;
 public class AudioLibraryActivity extends AppCompatActivity {
 
 
-    private AudioDataBaseHelper helper;
+    private DataBaseHelper helper;
     private ImageButton videosLibraryBackToMainButton;
     private ImageView loadAudio;
+    private ImageButton imageLibraryButtonAudio;
+    private ImageButton videoLibraryButtonAudio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +43,10 @@ public class AudioLibraryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_audio_library);
 
         loadAudio =(ImageView) findViewById(R.id.buttonloadaudio);
+        imageLibraryButtonAudio = (ImageButton) findViewById(R.id.imageLibraryButtonAudio);
+        videoLibraryButtonAudio = (ImageButton) findViewById(R.id.videoLibraryButtonAudio);
 
-        helper = new AudioDataBaseHelper(this);
+        helper = new DataBaseHelper(this);
 
         videosLibraryBackToMainButton = (ImageButton) findViewById(R.id.audioslibrarybacktomainbutton);
 
@@ -70,6 +74,22 @@ public class AudioLibraryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AudioLibraryActivity.this, LoadAudioActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
+        imageLibraryButtonAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AudioLibraryActivity.this, ImageLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
+        videoLibraryButtonAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AudioLibraryActivity.this, VideoLibraryActivity.class);
                 activityResultLauncher.launch(intent);
             }
         });
