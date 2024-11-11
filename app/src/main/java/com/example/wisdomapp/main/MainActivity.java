@@ -58,18 +58,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mainButtonAudios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AudioLibraryActivity.class);
-                activityResultLauncher.launch(intent);
-            }
-        });
-
         mainButtonVideos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, VideoLibraryActivity.class);
+                activityResultLauncher.launch(intent);
+            }
+        });
+
+        mainButtonAudios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AudioLibraryActivity.class);
                 activityResultLauncher.launch(intent);
             }
         });

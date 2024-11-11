@@ -64,7 +64,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="120dp"
             android:layout_marginBottom="200dp"
-            android:text="@string/titulo_audio"
+            android:text="@string/opcion_principal2"
             android:textColor="#494848"
             android:textSize="20sp" />
 

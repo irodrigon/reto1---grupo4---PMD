@@ -17,7 +17,7 @@ import java.util.List;
 public class AudioDataBaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "media.db";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 10;
     private static final String TABLE_NAME = "audios";
     private static final String COL_ID = "id";
     private static final String COL_TITLE = "title";
